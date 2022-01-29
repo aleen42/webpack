@@ -9160,6 +9160,11 @@ declare class RealContentHashPlugin {
 	static getCompilationHooks(
 		compilation: Compilation
 	): CompilationHooksRealContentHashPlugin;
+	static hashRegExp(keys?: any): RegExp;
+	static hashReplacer(keys?: any): RegExp;
+	static hashReplacement(
+		hashToNewHash?: any
+	): (ownHashes?: any) => (ignore?: any, caller?: any, hash?: any) => any;
 }
 declare interface RealDependencyLocation {
 	start: SourcePosition;
